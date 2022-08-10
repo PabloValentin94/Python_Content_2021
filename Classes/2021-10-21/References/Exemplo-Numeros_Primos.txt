@@ -1,0 +1,51 @@
+
+Algoritmo "semnome"
+
+// Disciplina : Técnicas de Programação e Algoritmos
+// Professor : Tiago Antonio da Silva
+// Descrição : Aqui você descreve o que o programa faz! (função)
+// Autor(a) : Nome do(a) aluno(a)
+// Data atual : 22/07/2021
+
+// Enunciado: Quais são os números primos de 0 à 100.
+// IDENTIFICAÇÃO DE NÚMEROS PRIMOS
+// O que são números primos?
+// n/1 ou n/n (sem resto, usando o mod, ex: 6 mod 2 dá zero.)
+
+Var
+// Seção de Declarações das variáveis
+
+n1, n2, numero_da_vez, dividiu, divisor : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+n1 <- 0
+n2 <- 2000// Percorrendo todos os números do intervalo.
+
+Para numero_da_vez De n1 Até n2 Faça // Zerando a verificação se deu certo a divisão a cada
+// "numero_da_vez"
+
+dividiu <- 0 // Testar se a divisão do numero não tem resto.
+
+Para divisor De n1 até numero_da_vez Faça
+
+  Se(numero_da_vez mod divisor = 0) Então
+
+    dividiu <- dividiu + 1
+
+  Fimse
+
+  Fimpara
+  // Verificiando se a variável dividiu vale 2, portando
+  // deu certo de fazer duas divisões sem resto e assim
+  // o "numero_da_vez" é primo.
+  Se(dividiu = 2) Então
+  Escreval("O número ", numero_da_vez, " é primo")
+  Fimse // codigo...
+  //Escreval("O número da vez (repetição) é ", numero_da_vez)
+
+Fimpara
+
+Fimalgoritmo
+

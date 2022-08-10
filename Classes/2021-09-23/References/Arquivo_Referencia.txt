@@ -1,0 +1,88 @@
+Algoritmo "Algoritmo Vendedor de Frios"
+
+// Disciplina   : [Técnicas de Programação e Algoritmo]
+// Professor   : Tiago Antonio da Silva 
+// Descrição   : Programa para calcular as comissões do vendedor
+// Autor(a)    : Pablo Valentin
+// Data atual  : 18/04/2021
+
+//Instruções:
+
+//Um vendedor trabalha com frios. Para cada produto há uma alíquota de comissão
+//conforme a especificação abaixo:
+
+//Mussarela: 5.0% Preço kg: 22,60
+
+//Mortadela: 6.5% Preço kg: 8,98
+
+//Presunto: 4.5% Preço kg: 31,03
+
+//Peito de Peru: 2.5% Preço kg: 58,90
+
+//Sabendo da alíquota da comissão: faça um programa que leia as quantidades
+//vendidas pelo vendedor e calcule a comissão.
+
+Var
+// Seção de Declarações das variáveis
+
+quantidade_mussarela:real
+quantidade_mortadela:real
+quantidade_presunto:real
+quantidade_peito_de_peru:real
+valor_vendido_mussarela:real
+valor_vendido_mortadela:real
+valor_vendido_presunto:real
+valor_vendido_peito_de_peru:real
+comissao_mussarela:real
+comissao_mortadela:real
+comissao_presunto:real
+comissao_peito_de_peru:real
+processo_1_comissao_total:real
+processo_2_comissao_total:real
+comissao_total:real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+Escreval ("PROGRAMA PARA CALCULAR SUAS COMISSÕES")
+
+Escreva ("Digite a quantidade vendida em kilos de mussarela: ")
+Leia (quantidade_mussarela)
+
+Escreva ("Digite a quantidade vendida em kilos de mortadela: ")
+Leia (quantidade_mortadela)
+
+Escreva ("Digite a quantidade vendida em kilos de presunto: ")
+Leia (quantidade_presunto)
+
+Escreva ("Digite a quantidade vendida em kilos de peito de peru: ")
+Leia (quantidade_peito_de_peru)
+
+valor_vendido_mussarela <- quantidade_mussarela * 22.60
+valor_vendido_mortadela <- quantidade_mortadela * 8.98
+valor_vendido_presunto <- quantidade_presunto * 31.03
+valor_vendido_peito_de_peru <- quantidade_peito_de_peru * 58.90
+
+comissao_mussarela <- valor_vendido_mussarela * 0.05
+comissao_mortadela <- valor_vendido_mortadela * 0.065
+comissao_presunto <- valor_vendido_presunto * 0.045
+comissao_peito_de_peru <- valor_vendido_peito_de_peru * 0.025
+
+Escreval ("O valor da comissão de mussarela é: R$", comissao_mussarela:2:2)
+Escreval ("O valor da comissão de mortadela é: R$", comissao_mortadela:2:2)
+Escreval ("O valor da comissão de presunto é: R$", comissao_presunto:2:2)
+Escreval ("O valor da comissão de peito de peru é: R$", comissao_peito_de_peru:2:2)
+
+processo_1_comissao_total <- comissao_mussarela + comissao_mortadela
+processo_2_comissao_total <- comissao_presunto + comissao_peito_de_peru
+
+comissao_total <- processo_1_comissao_total + processo_2_comissao_total
+
+Escreval ("O valor total da comissão do vendedor é: R$", comissao_total:2:2)
+
+//No caso o valor das comissões pode não ser preciso, já que o sistema irá
+//interpretar os valores como numéros reais e não como uma quantia de dinheiro.
+//Nesse caso arredondamos o valor das comissões com o comando :2:2, para que
+//assim ele fique mais preciso quando o usuário for visualizar.
+
+Fimalgoritmo
